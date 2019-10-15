@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS Issue Tracker</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -13,16 +13,26 @@
 
 <body onload="fetchIssues()">
     <div class="container">
+        <div class="alert alert-warning alert-dismissable" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true" &times;></span>
+            </button>
+            <strong><a href="http://codingthesmartway.com/courses/complete-javascript/" target="_blank">[ONLINE COURSE]
+                    - The
+                    Complete JavaScript Course: Build a Real-World Project</a></strong> +++ Master JavaScript with the
+            most
+            complete JavaScript course on the market! Includes projects, challenges, final exam, ES6 +++ You will gain a
+            deep
+            and true understanding of how JavaScript works behind the scenes. +++
+        </div>
         <h1>JS IssueTracker <small>by SpaceSoft.com</small></h1>
         <div class="jumbotron">
             <h3>Add New Issue:</h3>
             <form id="issueInputForm">
                 <div class="form-group">
                     <label for="issueDescInput">Description</label>
-                    <input type="text" class="form-control" id="issueDescInput" placeholder="Describe issue...">
+                    <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue ...">
                 </div>
-            </form>
-            <form id="issueInputForm">
                 <div class="form-group">
                     <label for="issueSeverityInput">Severity</label>
                     <select id="issueSeverityInput" class="form-control">
@@ -31,11 +41,10 @@
                         <option value="High">High</option>
                     </select>
                 </div>
-            </form>
-            <form id="issueInputForm">
                 <div class="form-group">
                     <label for="issueAssignedToInput">Assigned To</label>
-                    <input type="text" class="form-control" id="issueDescInput" placeholder="Enter responsible...">
+                    <input type="text" class="form-control" id="issueAssignedToInput"
+                        placeholder="Enter responsible ...">
                 </div>
                 <button type="submit" class="btn btn-primary">Add</button>
             </form>
@@ -43,15 +52,15 @@
         <div class="col-lg-12">
             <div id="issuesList">
             </div>
-            <div class="footer">
-                <p>&copy SpaceSoft.com</p>
-            </div>
+        </div>
+        <div class="footer">
+            <p>&copy <a href="http://spacesoft.com" target="_blank">SpaceSoft.com</a> | <a
+                    href="http://spacesoft.com/imprint" target="_blank">Imprint</a></p>
         </div>
     </div>
-    <script src="https://chancejs.com/chance.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="chance.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
