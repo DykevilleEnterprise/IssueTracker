@@ -25,7 +25,11 @@ function saveIssue(e){
         localStorage.setItem('issues', JSON.stringify(issues));
     }
 
-    
+    document.getElementById('issueInputForm').reset();
+
+    fetchIssues();
+
+    e.perventDefault();
 }
 
 function fetchIssues(){
